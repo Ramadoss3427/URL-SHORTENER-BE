@@ -121,7 +121,7 @@ usersRouter.put("/user/forgot", async (req, res) => {
 
     const sendMail = async () => {
       const info = await transporter.sendMail({
-        from: `"Udhayasooriyan" <${EMAIL_ADDRESS}>`,
+        from: `"Ramadoss" <${EMAIL_ADDRESS}>`,
         to: matchedUser.email,
         subject: "Reset Password",
         text: link,
