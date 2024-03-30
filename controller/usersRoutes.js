@@ -23,7 +23,7 @@ usersRouter.post("/user/signup", async (req, res) => {
     const randomString =
       Math.random().toString(36).substring(2, 15) +
       Math.random().toString(36).substring(2, 15);
-    const link = `${FEURL}/user/confirm/${randomString}`;
+    const link = `${"https://url-fe-self.vercel.app"}/user/confirm/${randomString}`;
 
     // hashed password
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -104,7 +104,7 @@ usersRouter.put("/user/forgot", async (req, res) => {
     const randomString =
       Math.random().toString(36).substring(2, 15) +
       Math.random().toString(36).substring(2, 15);
-    const link = `${FEURL}/user/reset/${randomString}`;
+    const link = `${"https://url-fe-self.vercel.app"}/user/reset/${randomString}`;
 
     matchedUser.resetToken = randomString;
     await User.findByIdAndUpdate(matchedUser.id, matchedUser);

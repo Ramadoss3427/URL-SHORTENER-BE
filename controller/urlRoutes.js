@@ -68,7 +68,7 @@ urlRouter.post("/user/url", async (req, res) => {
     for (i = 0; i < 4; i++) {
       random += letters[Math.floor(Math.random() * letters.length)];
     }
-    const shorturl = `${BEURL}/st/` + random;
+    const shorturl = `${"https://url-shortener-be-svqf.onrender.com"}/st/` + random;
 
     const url = new Url({
       longurl: body.longurl,
